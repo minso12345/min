@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.petbomi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Petbomi"
+        android:usesCleartextTraffic="true"
+
+        tools:targetApi="31"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="whateverString">
+        <activity
+            android:name=".LocationActivity" />
+
+
+
+        <activity
+            android:name=".ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ReviewActivity_detail"
+            android:exported="false"/>
+        <activity
+            android:name=".Booking_fin"
+            android:exported="false" />
+        <activity android:name=".BookingActivity1" />
+
+
+        <activity
+            android:name=".MainMenuActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:usesCleartextTraffic="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="google.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity"
+            />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".BookingActivity2" />
+        <activity android:name=".BookingActivity3" />
+        <activity android:name=".PayActivity" />
+
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="06k6loak11" />
+
+    </application>
+
+</manifest>
